@@ -1,0 +1,85 @@
+sudo apt update
+
+sudo apt install docker.io
+click y
+
+sudo docker pull nginx
+
+sudo docker images
+
+sudo docker run --name user1 john -d -p 8082:80 nginx
+
+sudo docker ps
+
+copy public ip address :8082
+
+
+
+git clone url
+
+ls
+
+cd sittflstore
+
+ls
+
+cd data
+
+mv products_data.json products.json'
+
+ls
+
+cd ..
+
+sudo docker build -t "dockerfile" .
+
+sudo docker images
+
+sudo docker run --name alex -d -p 8085:8000 dockerfile
+
+sudo docker ps
+
+copy public ip : 8085
+
+
+
+
+for cpp
+
+mkdir app
+cd app
+git clone url
+
+sudo docker run app(clone repo)
+
+sudo apt install g++
+
+go into repo(sum)
+g++ sum.cpp
+./a.out
+
+
+
+
+
+FROM gcc:latest
+WORKDIR /home/ubuntu/app
+COPY . .
+RUN g++ -o sum sum.cpp
+CMD ["./sum"]
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+
+	int n;
+	int sum=0;
+	cout<<"enter n";
+	cin>>n;
+	for(int i=0;i<=n;i++){
+		sum=sum+i;
+	}
+	cout<<"sum of 1+2+3+.....+n is "<<sum;
+}
